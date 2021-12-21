@@ -1,0 +1,79 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 64px;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+
+.bio {
+  text-align: center;
+  margin-top: 16px;
+  color:  #8899A6;
+
+}
+
+.info {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: #8899A6;
+}
+
+.splitscreen{
+  display: flex;
+
+}
+.splitscreen .left{
+  flex: 1;
+  padding: 8px;
+  border: 0;
+  border-radius: 10px;
+  width: 0px;
+  margin-right: 4px;
+}
+
+.splitscreen .right{
+  flex: 1;
+  padding: 8px;
+  border: 0;
+  border-radius: 10px;
+  margin-left: 4px;
+  width: -0px;
+}
+
+.waveButton {
+  color: black;
+  border-width: 2px;
+  border-color: #1DA1F2;
+  cursor: pointer;
+  background-color: white;
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  border-radius: 10px;
+  
+}
+
+.items{
+  color: white;
+  background-color: #223036;
+  margin-top: 16px;
+  padding: 8px;
+  border:0;
+  border-radius: 10px;
+  
+}
