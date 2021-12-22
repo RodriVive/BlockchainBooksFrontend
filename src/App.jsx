@@ -61,7 +61,7 @@ const getAllWaves = async () => {
         };
       });
 
-      setAllWaves(wavesCleaned);
+      setAllWaves(wavesCleaned.reverse());
     } else {
       console.log("Ethereum object doesn't exist!");
     }
@@ -70,22 +70,13 @@ const getAllWaves = async () => {
   }
 };
 
-/**
- * Listen in for emitter events!
- */
+
 useEffect(() => {
   let wavePortalContract;
 
   const onNewWave = (from, timestamp, message) => {
     console.log('NewWave', from, timestamp, message);
-    setAllWaves(prevState => [
-      ...prevState,
-      {
-        address: from,
-        timestamp: new Date(timestamp * 1000),
-        message: message,
-      },
-    ]);
+    getAllWaves();
   };
 
   if (window.ethereum) {
@@ -147,7 +138,7 @@ useEffect(() => {
           count = await wavePortalContract.getTotalWaves();
           console.log("Retrieved total wave count...", count.toNumber());
           document.getElementById("waves").innerHTML = count.toNumber();
-          getAllWaves();
+
         }
       else{
           console.log("Empty text entry")
